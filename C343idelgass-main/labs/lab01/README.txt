@@ -1,0 +1,1 @@
+Program to randomly generate DNA string of length 20 and display to console

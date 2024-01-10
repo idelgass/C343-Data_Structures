@@ -1,0 +1,23 @@
+Task A)
+	
+Using a queue:
+	void printLevelOrder(Node root){
+		Initialize Queue q to empty
+		Add root to q
+		Initialize Node n to empty
+		while(q is not empty){
+			Poll q and assign to n
+			Print n
+			if(n.left isn't null) Add n.left to q
+			if(n.right isn't null) Add n.right to q
+		}	  	
+	}
+
+
+
+			
+		
+		
+
+	
+		

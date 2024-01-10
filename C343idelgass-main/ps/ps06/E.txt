@@ -1,0 +1,15 @@
+The following graph has no negative cost cycle, but will still cause Dijkstra's alogorithm to fail.
+
+     D
+   /   \
+  10  -10 
+ /       \
+A         C
+ \       /
+  1     1
+   \   /
+     B
+
+Dijkstras's algorithm will add edges in the following order: A-B, B-C, A-D. This is incorrect as the shortest path from  A to C is not A->B->C but A->D->C (the former has a cost of 2 and the latter has a cost of 0).
+
+

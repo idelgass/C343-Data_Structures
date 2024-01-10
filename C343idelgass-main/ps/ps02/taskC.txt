@@ -1,0 +1,23 @@
+Task C)
+  1. The smallest element in a max heap will be found in one of the leaves
+  2. According to the build algorithm in the open DSA book, fill out the tree in index order then
+  perform necessary "sift-downs" bottom-up, right-to-left.
+
+ 	       17
+	     /    \
+	    29     43
+	   /  \    / \
+	  34   43 53 82
+	 / \   /
+	67 74 82
+  
+  Already a min heap, no further swaps required
+
+  3. 
+	       29
+	     /    \
+	    34     43
+	   /  \    / \
+	  67   43 53 82
+	 / \  
+	82 74

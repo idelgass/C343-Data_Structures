@@ -1,0 +1,41 @@
+Task B)
+1.a)
+	   15
+	  /  \
+	 5   20
+	 \   /\
+	  7 18 25
+	 /
+	16
+  b)
+	Preorder: 15, 5, 7, 16, 20, 18, 25
+	Inorder: 16, 7, 5, 15, 18, 20, 25
+	Postorder: 16, 7, 5, 18, 25, 20, 15
+
+2. Options are linked-list, array-list, BST
+  a) The records are guaranteed to arrive already sorted from lowest to highest (i.e., whenever a record is inserted, its key value will always be greater than that of the last
+  record inserted). A total of 1000 inserts will be interspersed with 1000 searches.
+
+	I would use an array-backed list here since the data is arriving pre sorted. This will give faster search (O(logn) for sorted array) than for linked list (O(n)) or
+	for BST (O(n) for sorted data). The usual downside to this is the high time complexity for insertion (O(n)), however since our data is arriving sorted we know that we will
+	only ever have to append to this array. This allows us to pre allocate the necessary memory based on the required 1000 inserts, giving us O(1) insertion time.
+
+  b) The records arrive with values having a uniform random distribution (so the BST is likely to be well balanced). Between 100,000 and 1,000,000 insertions will be performed,
+  followed by 10 searches.
+
+	I would use a linked-list due to the high insertion volume, as insertion is O(1) for linked-lists. While a BST would be well balanced and thus also have decent insertion (O(logn)),
+	as well as better search (O(logn) vs O(n) for the linked-list), the fact that we are doing 10000-100000 times more insertions than searches makes the linked-list the superior choice.
+
+  c) The records arrive with values having a uniform random distribution (so the BST is likely to be well balanced). 1000 insertions will be interspersed with 1000 searches.
+
+	I would use a BST. Since it is well balanced, this will give us O(logn) for both search and insertion. While a linked-list will still be more performative with regards to search,
+	the roughly equal search and insertion volumes means I would choose the BST (as a linked-list has undesirable O(n) for search).
+
+  d) The records arrive with values having a uniform random distribution (so the BST is likely to be well balanced). 1000 insertions will be performed, followed by 1,000,000 searches.
+
+	I would use a BST. The tree will be well balanced giving us O(logn) time complexity for both search and insertion. While the insertion time complexity will be worse than the O(1)
+	given by linked-lists, the fact that we are performing 1000 times more searches than insertions makes the O(n) search time for linked-lists prohibitive.
+
+
+
+	

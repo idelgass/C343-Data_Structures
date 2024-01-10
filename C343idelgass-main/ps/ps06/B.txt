@@ -1,0 +1,21 @@
+Adjacency Matrix:
+
+	  A B C D E F
+	A 0 0 1 0 1 0
+	B 0 0 1 0 0 1
+	C 1 1 0 1 0 1
+	D 0 0 1 0 0 1
+	E 1 0 0 0 0 1
+	F 0 1 1 1 1 0
+
+Adjacency List:
+
+	A -> C, E
+	B -> C, F
+	C -> A, B, D, F
+	D -> C, F
+	E -> A, F
+	F -> B, C, D, E
+
+DFS: B, C, A, E, F, D
+BFS: B, C, F, A, D, E

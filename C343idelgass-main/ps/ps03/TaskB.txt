@@ -1,0 +1,19 @@
+1. For quicksort algorithm with randomly chosen pivot, determine the running time for:
+a) sorted input
+	Theta(nlogn)
+b) reverse-ordered input
+	Theta(nlogn)
+c) random input
+	Theta(nlogn)
+
+These three will all have time complexity of nlogn due to the randomized pivot. Because there is no bias in pivot selection, the initial order of elements is irrelevant.
+
+2. For quicksort algorithm when the pivot is chosen as the first element, determine the running time for
+a) sorted input
+	Theta(n^2). The choice of pivot as an extreme (i.e. first or last element) when the array is sorted or inversely sorted gives worst case behavior. This is due to the partition
+	splitting the list into 1 and n - 1 elements each time.
+b) reverse-ordered input
+	Theta(n^2). See explanation above
+c) random input
+	Worse Theta(nlogn). This will behave more like the cases from part 1. Our pivot selection is always the first element, but this still gives us a randomized pivot value as the input
+	itself is not predictable. However as the array becomes closer to being sorted, the non random selection will begin to slow the sort down.

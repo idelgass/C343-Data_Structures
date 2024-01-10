@@ -1,0 +1,2 @@
+The code performs a depth first traversal of the graph.
+Since the arraylist is only being added to/removed from at the end, it will function like a stack rather than a queue. This indicates DFS rather than BFS.
