@@ -15,7 +15,19 @@ public class Sort {
     // Otherwise, best of luck on the lab! Tests/debugging will help a lot with IndexOutOfBoundsExceptions
     static List<Integer> insertionSort (List<Integer> ns) {
         // TODO
-        return null;
+        
+        for (int i = 1; i < ns.size(); i++) {
+            int key = ns.get(i);
+
+            int j = i - 1;
+            while (j >= 0 && ns.get(j).compareTo(key) > 0) {
+                ns.set(j + 1, ns.get(j));
+                j--;
+            }
+
+            ns.set(j + 1, key);
+        }
+        return ns;
     }
     
     public static void main(String[] args) {
